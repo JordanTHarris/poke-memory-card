@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from 'react';
+import './App.css';
+import { getRandomPokemonCollection } from './PokemonAPI';
+
+const NUM_CARDS = 8;
+const POKE_MIN_INDEX = 1;
+const POKE_MAX_INDEX = 151;
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [pokemonData, setPokemonData] = useState([]);
+  const [selectedData, setSelectedData] = useState([]);
+  const [numGames, setNumGames] = useState(0);
+  const [score, setScore] = useState(0);
+
+  function startGame() {
+    setPokemonData([]);
+    setSelectedData([]);
+    setScore(0);
+    setNumGames(numGames + 1);
+  }
+
+  useEffect(() => {
+    (async () => {
+      let data = [];
+      data = await getRandomPokemonCollection(POKE_MIN_INDEX, POKE_MAX_INDEX);
+      console.log(data);
+      setPokemonData(data);
+    })();
+  }, [numGames]);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Poke Memory Card</h1>
+      <button onClick={startGame}>Start Game</button>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
