@@ -14,10 +14,11 @@ async function getPokemonData(id) {
   }
 }
 
-async function getRandomPokemonCollection(minIndex, maxIndex) {
+async function getRandomPokemonCollection(size, minIndex, maxIndex) {
   const randomIds = [];
-  for (let i = minIndex; i <= maxIndex; i++) {
-    randomIds.push(Math.floor(Math.random() * 100) + 1);
+  for (let i = 0; i < size; i++) {
+    const randomNumber = Math.floor(Math.random() * (maxIndex - minIndex + 1)) + minIndex;
+    randomIds.push(randomNumber);
   }
 
   const pokemonCollection = [];

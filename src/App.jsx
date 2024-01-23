@@ -21,8 +21,7 @@ function App() {
 
   useEffect(() => {
     (async () => {
-      let data = [];
-      data = await getRandomPokemonCollection(POKE_MIN_INDEX, POKE_MAX_INDEX);
+      const data = await getRandomPokemonCollection(NUM_CARDS, POKE_MIN_INDEX, POKE_MAX_INDEX);
       console.log(data);
       setPokemonData(data);
     })();
