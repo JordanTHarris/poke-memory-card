@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import { getRandomPokemonCollection } from './PokemonAPI';
+import Card from './components/Card';
 
 const NUM_CARDS = 8;
 const POKE_MIN_INDEX = 1;
@@ -27,10 +28,18 @@ function App() {
     })();
   }, [numGames]);
 
+  function handleSelection() {
+    setScore(score + 1);
+  }
+
   return (
     <>
       <h1>Poke Memory Card</h1>
       <button onClick={startGame}>Start Game</button>
+      {pokemonData.length > 0 &&
+        pokemonData.map((pokemon) => (
+          <Card key={pokemon.id} data={pokemon} handleSelection={handleSelection} />
+        ))}
     </>
   );
 }
