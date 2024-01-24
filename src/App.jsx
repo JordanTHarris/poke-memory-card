@@ -61,7 +61,7 @@ function App() {
       <h1>Pokémon Memory Game</h1>
       <h2>Score: {score}</h2>
       <h2>Hi Score: {hiScore}</h2>
-      <button onClick={startGame}>Start Game</button>
+      <button onClick={startGame}>Restart</button>
       <div className="card-container">
         {pokemonData.length > 0 &&
           pokemonData.map((pokemon) => (
