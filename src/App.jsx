@@ -45,10 +45,10 @@ function App() {
   }
 
   function handleSelection(name) {
+    incrementScore();
     if (selectedData.includes(name) || selectedData.length === NUM_CARDS - 1) {
       endGame();
     } else {
-      incrementScore();
       shuffleCards(pokemonData);
       setPokemonData(shuffleCards(pokemonData));
       setSelectedData([...selectedData, name]);

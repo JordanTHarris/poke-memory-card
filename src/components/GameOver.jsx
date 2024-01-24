@@ -1,7 +1,7 @@
 import '../styles/modal.css';
 
 function gameOverText(score, numCards) {
-  if (score === numCards - 1) {
+  if (score === numCards) {
     return 'You Win!';
   } else {
     return `You got ${score} out of ${numCards} Pokémon`;
