@@ -1,4 +1,5 @@
 import createCardBackground from '../cardBackground';
+import { capitalizeFirst } from '../utils/textFormatting';
 
 function Card({ data: { name, types, imageUrl }, handleSelection }) {
   return (
@@ -11,7 +12,7 @@ function Card({ data: { name, types, imageUrl }, handleSelection }) {
         <h2>{name}</h2>
         <ul>
           {types.map((type) => (
-            <li key={type.type.name}>{type.type.name}</li>
+            <li key={type.type.name}>{capitalizeFirst(type.type.name)}</li>
           ))}
         </ul>
       </button>

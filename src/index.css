@@ -54,11 +54,29 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.card-inner {
+  border: 10px solid #ffcb05;
+}
+.card-inner:hover {
+  border: 10px solid #2a75bb;
+}
+
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* .card {
+  height: 400px;
+} */
 
 @media (prefers-color-scheme: light) {
   :root {
