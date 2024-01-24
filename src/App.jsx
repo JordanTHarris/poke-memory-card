@@ -5,7 +5,7 @@ import shuffleCards from './utils/shuffleCards';
 import Card from './components/Card';
 import GameOver from './components/GameOver';
 
-const NUM_CARDS = 8;
+const NUM_CARDS = 9;
 const POKE_MIN_INDEX = 1;
 const POKE_MAX_INDEX = 151;
 
