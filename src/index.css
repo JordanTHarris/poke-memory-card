@@ -45,6 +45,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  color: white;
 }
 button:hover {
   border-color: #646cff;
@@ -56,6 +57,7 @@ button:focus-visible {
 
 .card-inner {
   border: 10px solid #ffcb05;
+  color: white;
 }
 .card-inner:hover {
   border: 10px solid #2a75bb;
