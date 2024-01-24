@@ -13,6 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   --card-width: 180px;
+  --card-border: 10px solid #ffcb05;
 }
 
 body {
@@ -69,14 +70,27 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 10px solid #ffcb05;
+  border: var(--card-border);
   border-radius: 2%;
   padding: 8px;
   width: var(--card-width);
 }
 
 .card:hover {
-  border: 10px solid #2a75bb;
+  border: var(--card-border);
+}
+.card:focus:not(:focus-visible) {
+  outline: none;
+}
+.card:focus,
+.card.focus-visible:focus:not(:focus-visible) {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (hover: hover) {
+  .card:hover {
+    border: 10px solid #2a75bb;
+  }
 }
 
 ul {

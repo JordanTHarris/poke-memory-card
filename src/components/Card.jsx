@@ -3,7 +3,6 @@ import { capitalizeFirst } from '../utils/textFormatting';
 
 function Card({ data: { name, types, imageUrl }, handleSelection }) {
   return (
-    // <div className="card" onClick={() => handleSelection(name)}>
     <button
       className="card"
       onClick={() => handleSelection(name)}
@@ -17,7 +16,6 @@ function Card({ data: { name, types, imageUrl }, handleSelection }) {
         ))}
       </ul>
     </button>
-    // </div>
   );
 }
 
