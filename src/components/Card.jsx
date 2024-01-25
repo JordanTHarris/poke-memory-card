@@ -13,7 +13,7 @@ function Card({ data: { name, types, imageUrl }, handleSelection, gameOver, dela
       }
     }
     flipCard();
-    setTimeout(() => {}, delay); // hold the cards after flip
+    setTimeout(flipCard, delay);
   });
 
   return (
