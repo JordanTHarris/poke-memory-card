@@ -54,8 +54,7 @@ function App() {
     if (selectedData.includes(name) || selectedData.length === NUM_CARDS - 1) {
       endGame();
     } else {
-      shuffleCards(pokemonData);
-      setTimeout(shuffle, DELAY_MS);
+      setTimeout(shuffle, DELAY_MS); // delay shuffle until cards are flipped
       setSelectedData([...selectedData, name]);
     }
   }
