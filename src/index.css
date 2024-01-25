@@ -136,4 +136,8 @@ ul {
     color: #213547;
     background-color: #ffffff;
   }
+
+  .score-bar {
+    background: #e9eef0;
+  }
 }
