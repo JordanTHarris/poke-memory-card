@@ -45,16 +45,19 @@ function App() {
     if (newScore > hiScore) setHiScore(newScore);
   }
 
+  function shuffle() {
+    setPokemonData(shuffleCards(pokemonData));
+  }
+
   function handleSelection(name) {
     incrementScore();
     if (selectedData.includes(name) || selectedData.length === NUM_CARDS - 1) {
       endGame();
     } else {
       shuffleCards(pokemonData);
-      setPokemonData(shuffleCards(pokemonData));
+      setTimeout(shuffle, DELAY_MS);
       setSelectedData([...selectedData, name]);
     }
-    console.log(selectedData);
   }
 
   return (
