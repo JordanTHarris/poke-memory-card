@@ -22,16 +22,18 @@ function Card({ data: { name, types, imageUrl }, handleSelection, gameOver, dela
       className="card"
       onClick={() => handleSelection(name)}
       style={{ background: createCardBackground(types) }}>
-      <div className="card-front">
-        <img src={imageUrl} alt={name} />
-        <h2>{name}</h2>
-        <ul>
-          {types.map((type) => (
-            <li key={type.type.name}>{capitalizeFirst(type.type.name)}</li>
-          ))}
-        </ul>
+      <div className="card-inner">
+        <div className="card-front">
+          <img src={imageUrl} alt={name} />
+          <h2 className="card-name">{name}</h2>
+          <ul>
+            {types.map((type) => (
+              <li key={type.type.name}>{capitalizeFirst(type.type.name)}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="card-back"></div>
       </div>
-      <div className="card-back"></div>
     </button>
   );
 }

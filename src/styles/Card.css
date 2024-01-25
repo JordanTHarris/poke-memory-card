@@ -6,15 +6,34 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   border: var(--card-border);
   border-radius: 2%;
   padding: 8px;
+  aspect-ratio: 2.5 / 3.5;
   width: var(--card-width);
   font-size: 1em;
 }
 
-/* .card-back {
-  position: absolute;
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.card-back {
+  display: flex;
   background-image: url('../assets/pokemon-card-back.png');
   background-size: cover;
   background-position: center;
@@ -22,16 +41,46 @@
   background-color: #192653;
   border: 0.9rem solid #192653;
   transform: rotateY(180deg);
-} */
+  margin: 0;
+  padding: 0;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  backface-visibility: hidden;
+}
 
 .card.flip {
-  /* transform: rotateY(180deg); */
   --rotate-y: 180deg;
 }
 
 .card img {
-  max-width: 100%;
-  height: auto;
+  width: 8rem;
+  margin-top: 4px;
+}
+
+.card-front * {
+  margin: 0;
+  /* padding: 0; */
+}
+
+.card-name {
+  font-size: 1.2em;
+  padding: 0;
+  margin-top: 20px;
+}
+
+ul {
+  font-size: 0.9em;
+  font-weight: 300;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  float: left;
+  padding: 8px;
 }
 
 .card:hover {
@@ -43,4 +92,10 @@
 .card:focus,
 .card.focus-visible:focus:not(:focus-visible) {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (hover: hover) {
+  .card:hover {
+    border: 10px solid #2a75bb;
+  }
 }
