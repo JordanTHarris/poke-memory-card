@@ -5,7 +5,7 @@ import shuffleCards from './utils/shuffleCards';
 import Card from './components/Card';
 import GameOver from './components/GameOver';
 
-const NUM_CARDS = 9;
+const NUM_CARDS = 10;
 const POKE_MIN_INDEX = 1;
 const POKE_MAX_INDEX = 151;
 
@@ -59,9 +59,11 @@ function App() {
   return (
     <>
       <h1>Pokémon Memory Game</h1>
-      <h2>Score: {score}</h2>
-      <h2>Hi Score: {hiScore}</h2>
-      <button onClick={startGame}>Restart</button>
+      <div className="score-bar">
+        <h2>Score: {score}</h2>
+        <h2>Hi Score: {hiScore}</h2>
+        <button onClick={startGame}>Restart</button>
+      </div>
       <div className="card-container">
         {pokemonData.length > 0 &&
           pokemonData.map((pokemon) => (
