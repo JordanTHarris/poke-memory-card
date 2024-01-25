@@ -80,7 +80,7 @@ button:focus-visible {
   margin-top: 2rem;
 }
 
-.card img {
+/* .card img {
   max-width: 100%;
   height: auto;
 }
@@ -105,7 +105,7 @@ button:focus-visible {
 .card:focus,
 .card.focus-visible:focus:not(:focus-visible) {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (hover: hover) {
   .card:hover {

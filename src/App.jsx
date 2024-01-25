@@ -8,6 +8,7 @@ import GameOver from './components/GameOver';
 const NUM_CARDS = 10;
 const POKE_MIN_INDEX = 1;
 const POKE_MAX_INDEX = 151;
+const DELAY_MS = 600;
 
 function App() {
   const [pokemonData, setPokemonData] = useState([]);
@@ -67,7 +68,13 @@ function App() {
       <div className="card-container">
         {pokemonData.length > 0 &&
           pokemonData.map((pokemon) => (
-            <Card key={pokemon.key} data={pokemon} handleSelection={handleSelection} />
+            <Card
+              key={pokemon.key}
+              data={pokemon}
+              handleSelection={handleSelection}
+              gameOver={gameOver}
+              delay={DELAY_MS}
+            />
           ))}
       </div>
       {gameOver && <GameOver score={score} numCards={NUM_CARDS} restartGame={startGame} />}
