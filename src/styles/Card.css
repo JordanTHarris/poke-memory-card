@@ -78,7 +78,7 @@ li {
 
 .card:hover {
   border: var(--card-border);
-  --translate-y: -2px;
+  /* --translate-y: -2px; */
 }
 .card:focus:not(:focus-visible) {
   outline: none;
