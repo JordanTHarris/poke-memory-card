@@ -2,21 +2,35 @@
   max-width: 1500px;
   margin: 0 auto;
   /* padding: 2rem; */
-  /* width: 70vw; */
+  width: 1000px;
   text-align: center;
-}
-@media (max-width: 1300px) {
-  #root {
-    width: 50vw;
-  }
 }
 @media (max-width: 1200px) {
   #root {
     width: 60vw;
   }
 }
+@media (max-width: 935px) {
+  #root {
+    width: 80vw;
+  }
+}
 @media (max-width: 700px) {
   #root {
     width: 90vw;
+  }
+
+  .card {
+    font-size: 0.9em;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.1em;
+  }
+
+  .card img {
+    width: 7rem;
   }
 }

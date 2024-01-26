@@ -72,13 +72,13 @@ button:focus-visible {
 
 .card-container {
   display: grid;
-  /* overflow: hidden; */
+  overflow: hidden;
   grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
   grid-auto-rows: 1fr;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   justify-items: center;
-  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
 @media (max-width: 700px) {
