@@ -4,6 +4,7 @@ import { getRandomPokemonCollection } from './PokemonAPI';
 import shuffleCards from './utils/shuffleCards';
 import Card from './components/Card';
 import GameOver from './components/GameOver';
+import GameStart from './components/GameStart';
 
 const NUM_CARDS = 10;
 const POKE_MIN_INDEX = 1;
@@ -79,6 +80,7 @@ function App() {
             />
           ))}
       </div>
+      {numGames === 0 && <GameStart startGame={startGame} numCards={NUM_CARDS} />}
       {gameOver && <GameOver score={score} numCards={NUM_CARDS} restartGame={startGame} />}
     </>
   );

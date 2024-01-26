@@ -23,3 +23,19 @@
   justify-content: center;
   align-items: center;
 }
+
+.game-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+/* .instructions {
+  flex: 1;
+}
+
+.start-button {
+  margin-top: 20px;
+  flex: 0;
+} */
