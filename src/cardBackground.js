@@ -22,10 +22,10 @@ const typeToColor = {
 };
 
 function createCardBackground(types) {
-  const shadedColor = Color(typeToColor[types[0].type.name]).darken(0.5);
+  const shadedColor = Color(typeToColor[types[0].type.name]).darken(0.6);
   return types.length == 1
-    ? `linear-gradient(to right, ${typeToColor[types[0].type.name]} 0%, ${shadedColor} 100%)`
-    : `linear-gradient(to right, ${typeToColor[types[0].type.name]} 0%, ${
+    ? `linear-gradient(to bottom right, ${typeToColor[types[0].type.name]} 0%, ${shadedColor} 100%)`
+    : `linear-gradient(to bottom right, ${typeToColor[types[0].type.name]} 0%, ${
         typeToColor[types[1].type.name]
       } 100%)`;
 }

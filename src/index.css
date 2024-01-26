@@ -1,19 +1,31 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Roboto, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  --poke-yellow: #ffcb05;
+  --poke-blue: #3d7dca;
+  --poke-navy: #003a70;
+
+  --text-color: #ffffff;
+  --bg-color: #242424;
+  --score-bg-color: #3d3d3d;
+  --modal-bg-color: var(--bg-color);
+  --shadow-color: rgba(0, 0, 0, 0.19);
+  --shadows: var(--shadow-color) 0px 10px 20px, var(--shadow-color) 0px 6px 6px;
+
   --card-width: 180px;
-  --card-border: 10px solid #ffcb05;
+  --card-border: 10px solid var(--poke-yellow);
+
+  color-scheme: light dark;
+
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 @media (max-width: 700px) {
@@ -43,27 +55,28 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--poke-blue);
   cursor: pointer;
   transition: border-color 0.25s;
   color: white;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: var(--poke-navy);
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 4px solid var(--poke-yellow);
 }
 
 .score-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #353535;
+  background: var(--score-bg-color);
   position: sticky;
-  z-index: 999;
+  z-index: 997;
   top: 0;
+  box-shadow: var(--shadows);
 }
 
 .score-bar * {
