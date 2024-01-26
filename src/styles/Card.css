@@ -1,8 +1,9 @@
+/* --delay-time set in App.jsx through DELAY_MS */
+
 .card {
-  /* position: relative; */
   transform-style: preserve-3d;
   transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
-  transition: all 600ms ease-out;
+  transition: all var(--delay-time) ease-out;
 
   display: flex;
   flex-direction: column;

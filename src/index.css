@@ -79,22 +79,7 @@ button:focus-visible {
   grid-row-gap: 10px;
   justify-items: center;
   padding-top: 2rem;
-}
-
-@media (max-width: 700px) {
-  .card {
-    font-size: 0.9em;
-  }
-  h1 {
-    font-size: 2em;
-  }
-  h2 {
-    font-size: 1.1em;
-  }
-
-  .card img {
-    width: 7rem;
-  }
+  padding-bottom: 2rem;
 }
 
 @media (prefers-color-scheme: light) {
