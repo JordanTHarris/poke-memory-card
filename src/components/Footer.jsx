@@ -8,6 +8,7 @@ function Footer() {
         rel="noreferrer">
         <svg className="github-logo"></svg>
       </a>
+      <p className="footer-text">Jordan Harris</p>
     </div>
   );
 }

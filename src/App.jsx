@@ -65,7 +65,7 @@ function App() {
 
   return (
     <>
-      <h1>Pokémon Memory Game</h1>
+      <h1 className="title">Pokémon Memory Game</h1>
       <div className="score-bar">
         <h2>Score: {score}</h2>
         <h2>Hi Score: {hiScore}</h2>
