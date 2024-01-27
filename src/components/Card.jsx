@@ -24,7 +24,10 @@ function Card({ data: { name, types, imageUrl }, handleSelection, gameOver, dela
       ref={cardRef}
       className="card"
       onClick={() => handleSelection(name)}
-      style={{ background: createCardBackground(types), '--delay-time': `${delay}ms` }}>
+      style={{
+        background: createCardBackground(types),
+        '--delay-time': `${delay}ms`, // set delay in css
+      }}>
       <div className="card-front">
         <img src={imageUrl} alt={name} />
         <h2 className="card-name">{name}</h2>
