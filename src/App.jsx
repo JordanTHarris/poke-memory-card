@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     (async () => {
       const data = await getRandomPokemonCollection(NUM_CARDS, POKE_MIN_INDEX, POKE_MAX_INDEX);
-      console.log(data);
+      // console.log(data);
       setPokemonData(data);
     })();
   }, [numGames]);

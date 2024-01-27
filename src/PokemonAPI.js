@@ -1,5 +1,5 @@
 import { v4 as uuid } from 'uuid';
-import { capitalizeFirst } from './utils/textFormatting';
+import { formatName } from './utils/textFormatting';
 
 async function getPokemonData(id) {
   try {
@@ -44,7 +44,7 @@ async function getRandomPokemonCollection(size, minIndex, maxIndex) {
 class Pokemon {
   constructor({ id, name, types, sprites }) {
     this.id = id;
-    this.name = capitalizeFirst(name);
+    this.name = formatName(name);
     this.types = types;
     this.imageUrl = sprites.other['official-artwork'].front_default;
     this.key = uuid();
