@@ -87,7 +87,7 @@ button:focus-visible {
   position: sticky;
   z-index: 997;
   top: 0;
-  box-shadow: var(--shadows);
+  box-shadow: var(--score-shadow);
 }
 
 .score-bar * {

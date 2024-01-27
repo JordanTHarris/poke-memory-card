@@ -18,8 +18,9 @@
   --bg-color: #242424;
   --score-bg-color: rgba(49, 49, 49, 0.9);
   --modal-bg-color: rgba(36, 36, 36, 0.95);
-  --shadow-color: rgba(0, 0, 0, 0.19);
-  --shadows: var(--shadow-color) 0px 10px 20px, var(--shadow-color) 0px 6px 6px;
+  --shadow-color: rgba(0, 0, 0, 0.45);
+  --score-shadow: var(--shadow-color) 0px 25px 20px -20px;
+  --card-shadow: var(--shadow-color) 0px 20px 30px -10px;
 
   --title-font-size: 3.2em;
   --card-width: 180px;
