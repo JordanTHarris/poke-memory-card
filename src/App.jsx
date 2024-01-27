@@ -17,9 +17,9 @@ function App() {
   const [numGames, setNumGames] = useState(0);
   const [score, setScore] = useState(0);
   const [hiScore, setHiScore] = useState(0);
+  const [gameStarted, setGameStarted] = useState(false); // flip card after game starts on click
   const [gameOver, setGameOver] = useState(false);
   const [instructionsShowing, setInstructionsShowing] = useState(true);
-  const [gameStarted, setGameStarted] = useState(false); // flip card after game starts on click
 
   useEffect(() => {
     (async () => {
@@ -54,10 +54,11 @@ function App() {
 
   function handleSelection(name) {
     setGameStarted(true);
-    incrementScore();
-    if (selectedData.includes(name) || selectedData.length === NUM_CARDS - 1) {
+    if (selectedData.includes(name)) {
+      if (selectedData.length === NUM_CARDS - 1) incrementScore();
       endGame();
     } else {
+      incrementScore();
       setTimeout(shuffle, DELAY_MS); // delay shuffle until cards are flipped
       setSelectedData([...selectedData, name]);
     }
