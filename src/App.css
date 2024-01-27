@@ -114,8 +114,8 @@ button:focus-visible {
   height: 30px;
   align-items: center;
   justify-content: center;
-  padding-bottom: 30px;
-  padding-top: 10px;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
 }
 
 .github-logo {
@@ -123,12 +123,11 @@ button:focus-visible {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
 }
 .footer-text {
   font-weight: 300;
-  font-size: 0.8em;
+  font-size: 0.75em;
   margin: 0;
-  margin-top: 0.5rem;
 }
