@@ -5,7 +5,6 @@ import shuffleCards from './utils/shuffleCards';
 import Card from './components/Card';
 import GameOver from './components/GameOver';
 import GameStart from './components/GameStart';
-import Footer from './components/Footer';
 
 const NUM_CARDS = 10;
 const POKE_MIN_INDEX = 1;
@@ -85,7 +84,6 @@ function App() {
             />
           ))}
       </div>
-      <Footer />
       {instructionsShowing && (
         <GameStart startGame={() => setInstructionsShowing(false)} numCards={NUM_CARDS} />
       )}

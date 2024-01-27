@@ -1,9 +1,12 @@
 #root {
+  display: flex;
+  flex-direction: column;
   max-width: 1500px;
   margin: 0 auto;
   /* padding: 2rem; */
   width: 1000px;
   text-align: center;
+  min-height: 100vh;
 }
 @media (max-width: 1200px) {
   #root {
