@@ -18,6 +18,8 @@ function App() {
   const [score, setScore] = useState(0);
   const [hiScore, setHiScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
+  const [instructionsShowing, setInstructionsShowing] = useState(true);
+  const [gameStarted, setGameStarted] = useState(false); // flip card after game starts on click
 
   useEffect(() => {
     (async () => {
@@ -51,6 +53,7 @@ function App() {
   }
 
   function handleSelection(name) {
+    setGameStarted(true);
     incrementScore();
     if (selectedData.includes(name) || selectedData.length === NUM_CARDS - 1) {
       endGame();
@@ -77,10 +80,13 @@ function App() {
               handleSelection={handleSelection}
               gameOver={gameOver}
               delay={DELAY_MS}
+              gameStarted={gameStarted}
             />
           ))}
       </div>
-      {numGames === 0 && <GameStart startGame={startGame} numCards={NUM_CARDS} />}
+      {instructionsShowing && (
+        <GameStart startGame={() => setInstructionsShowing(false)} numCards={NUM_CARDS} />
+      )}
       {gameOver && <GameOver score={score} numCards={NUM_CARDS} restartGame={startGame} />}
     </>
   );

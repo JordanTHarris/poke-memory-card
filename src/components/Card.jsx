@@ -3,7 +3,7 @@ import createCardBackground from '../cardBackground';
 import { capitalizeFirst } from '../utils/textFormatting';
 import '../styles/Card.css';
 
-function Card({ data: { name, types, imageUrl }, handleSelection, gameOver, delay }) {
+function Card({ data: { name, types, imageUrl }, handleSelection, gameOver, delay, gameStarted }) {
   const cardRef = useRef(null);
 
   useEffect(() => {
@@ -12,8 +12,11 @@ function Card({ data: { name, types, imageUrl }, handleSelection, gameOver, dela
         cardRef.current.classList.toggle('flip');
       }
     }
-    flipCard();
-    setTimeout(flipCard, delay);
+    // Don't flip on initial load
+    if (gameStarted) {
+      flipCard();
+      setTimeout(flipCard, delay);
+    }
   });
 
   return (
