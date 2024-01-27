@@ -14,8 +14,8 @@
 
   --text-color: #ffffff;
   --bg-color: #242424;
-  --score-bg-color: #3d3d3d;
-  --modal-bg-color: var(--bg-color);
+  --score-bg-color: rgba(49, 49, 49, 0.9);
+  --modal-bg-color: rgba(36, 36, 36, 0.95);
   --shadow-color: rgba(0, 0, 0, 0.19);
   --shadows: var(--shadow-color) 0px 10px 20px, var(--shadow-color) 0px 6px 6px;
 
@@ -32,8 +32,8 @@
   :root {
     --text-color: #213547;
     --bg-color: #ffffff;
-    --score-bg-color: #e9eef0;
-    --modal-bg-color: #e9eef0;
+    --score-bg-color: rgb(233, 238, 240, 0.9);
+    --modal-bg-color: rgb(233, 238, 240, 0.9);
   }
 }
 
