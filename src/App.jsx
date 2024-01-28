@@ -55,11 +55,17 @@ function App() {
 
   function handleSelection(name) {
     setGameStarted(true);
-    if (selectedData.includes(name)) {
-      if (selectedData.length === NUM_CARDS - 1) incrementScore();
+
+    if (gameOver || selectedData.includes(name)) {
+      endGame();
+      return;
+    }
+
+    incrementScore();
+
+    if (score === NUM_CARDS - 1) {
       endGame();
     } else {
-      incrementScore();
       setTimeout(shuffle, DELAY_MS); // delay shuffle until cards are flipped
       setSelectedData([...selectedData, name]);
     }
