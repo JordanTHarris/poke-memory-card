@@ -1,6 +1,4 @@
 import { useEffect } from 'react';
-// import DarkModeIcon from '/dark-mode.svg';
-// import LightModeIcon from '/light-mode.svg';
 import useLocalStorage from 'use-local-storage';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
@@ -28,13 +26,6 @@ function ThemeButton() {
 
   return (
     <div className="theme-container">
-      {/* <button className="theme-button" onClick={toggleTheme}>
-        <img
-          className="theme-icon"
-          src={theme === 'dark' ? DarkModeIcon : LightModeIcon}
-          alt="Theme"
-        />
-      </button> */}
       <DarkModeSwitch
         className="dark-switch"
         checked={theme === 'dark'}
