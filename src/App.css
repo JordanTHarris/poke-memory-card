@@ -45,8 +45,9 @@ body {
 .theme-container {
   display: flex;
   margin-left: auto;
+  padding: 1rem;
 }
-.theme-button {
+/* .theme-button {
   background: none;
   top: 1rem;
   right: 1rem;
@@ -62,7 +63,7 @@ body {
 }
 .theme-icon {
   filter: var(--theme-filter);
-}
+} */
 
 h1.title {
   font-size: var(--title-font-size);
