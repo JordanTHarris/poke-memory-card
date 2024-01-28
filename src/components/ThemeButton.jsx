@@ -10,18 +10,18 @@ function ThemeButton() {
 
   useEffect(() => {
     if (hasSelectedTheme) {
+      // Set theme based on local storage
       document.documentElement.setAttribute('data-theme', theme);
     } else {
+      // Set theme based on the user's preference
       document.documentElement.setAttribute('data-theme', defaultDark ? 'dark' : 'light');
     }
   });
 
-  // Function to toggle between dark and light themes
   function toggleTheme() {
     setHasSelectedTheme(true);
     const newTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
     document.documentElement.setAttribute('data-theme', newTheme);
   }
 
