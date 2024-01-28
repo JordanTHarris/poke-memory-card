@@ -5,6 +5,7 @@ import shuffleCards from './utils/shuffleCards';
 import Card from './components/Card';
 import GameOver from './components/GameOver';
 import GameStart from './components/GameStart';
+import ThemeButton from './components/ThemeButton';
 
 const NUM_CARDS = 10;
 const POKE_MIN_INDEX = 1;
@@ -66,6 +67,7 @@ function App() {
 
   return (
     <>
+      <ThemeButton />
       <h1 className="title">Pokémon Memory Game</h1>
       <div className="score-bar">
         <h2>Score: {score}</h2>

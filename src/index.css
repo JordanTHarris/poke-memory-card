@@ -15,8 +15,8 @@
 
   --title-color: var(--poke-yellow);
   --text-color: #ffffff;
-  --bg-color: #242424;
-  --score-bg-color: rgba(49, 49, 49, 0.9);
+  --bg-color: #212121;
+  --score-bg-color: rgba(39, 39, 39, 0.95);
   --modal-bg-color: rgba(36, 36, 36, 0.95);
   --shadow-color: rgba(0, 0, 0, 0.45);
   --score-shadow: var(--shadow-color) 0px 25px 20px -20px;
@@ -32,22 +32,33 @@
 
   color: var(--text-color);
   background-color: var(--bg-color);
+
+  --theme-filter: invert(100%) sepia(23%) saturate(2%) hue-rotate(316deg) brightness(106%)
+    contrast(101%);
+}
+
+[data-theme='light'] {
+  --title-color: var(--poke-blue);
+  --text-color: #213547;
+  --bg-color: #ffffff;
+  --score-bg-color: rgb(233, 238, 240, 0.9);
+  --modal-bg-color: rgb(233, 238, 240, 0.9);
+  --gh-logo: url('./assets/github-mark.svg');
+  --theme-filter: invert(15%) sepia(17%) saturate(1529%) hue-rotate(167deg) brightness(99%)
+    contrast(88%);
+}
+
+[data-theme='pokemon'] {
+  --title-color: var(--poke-blue);
+  --bg-color: var(--poke-navy);
+  --score-bg-color: rgba(23, 80, 133, 0.95);
+  --modal-bg-color: rgba(23, 80, 133, 0.95);
+  --gh-logo: url('./assets/github-mark.svg');
 }
 
 @font-face {
   font-family: pokemon;
-  src: url('/fonts/pokemon.ttf') format('truetype');
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --title-color: var(--poke-blue);
-    --text-color: #213547;
-    --bg-color: #ffffff;
-    --score-bg-color: rgb(233, 238, 240, 0.9);
-    --modal-bg-color: rgb(233, 238, 240, 0.9);
-    --gh-logo: url('./assets/github-mark.svg');
-  }
+  src: url('/fonts/Pokemon Hollow.ttf') format('truetype');
 }
 
 @media (max-width: 700px) {
