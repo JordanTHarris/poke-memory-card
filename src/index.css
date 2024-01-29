@@ -1,5 +1,5 @@
 :root {
-  font-family: Roboto, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'VT323', Roboto, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -9,7 +9,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   --poke-yellow: #ffcb05;
-  --poke-blue: #3d7dca;
+  --poke-blue: #365fac;
   --poke-navy: #003a70;
   --poke-red: #ff0000;
 
@@ -38,7 +38,7 @@
 }
 
 [data-theme='light'] {
-  --title-color: var(--poke-blue);
+  /* --title-color: var(--poke-blue); */
   --text-color: #213547;
   --bg-color: #ffffff;
   --score-bg-color: rgb(233, 238, 240, 0.9);
@@ -58,7 +58,12 @@
 
 @font-face {
   font-family: pokemon;
-  src: url('/fonts/Pokemon Hollow.ttf') format('truetype');
+  src: url('/fonts/Pokemon Solid.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: VT323;
+  src: url('/fonts/VT323-Regular.ttf') format('truetype');
 }
 
 @media (max-width: 700px) {

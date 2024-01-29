@@ -14,8 +14,8 @@
   padding: 8px;
   aspect-ratio: 2.5 / 3.5;
   width: var(--card-width);
-  font-size: 1em;
   box-shadow: var(--card-shadow);
+  font-family: 'VT323';
 }
 
 .card-front {
@@ -61,13 +61,13 @@
 }
 
 .card-name {
-  font-size: 1.2em;
+  font-size: 1.5em;
   padding: 0;
   margin-top: 20px;
 }
 
 ul {
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 300;
   list-style: none;
   margin: 0;

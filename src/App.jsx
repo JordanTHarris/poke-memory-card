@@ -78,7 +78,9 @@ function App() {
       <div className="score-bar">
         <h2>Score: {score}</h2>
         <h2>Hi Score: {hiScore}</h2>
-        <button onClick={startGame}>Restart</button>
+        <button className="buttons" onClick={startGame}>
+          Restart
+        </button>
       </div>
       <div className="card-container">
         {pokemonData.length > 0 &&

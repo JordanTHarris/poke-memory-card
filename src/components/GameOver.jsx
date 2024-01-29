@@ -13,7 +13,9 @@ function GameOver({ score, numCards, restartGame }) {
     <div className="overlay">
       <div className="game-over modal">
         <h2>{gameOverText(score, numCards)}</h2>
-        <button onClick={restartGame}>Play Again</button>
+        <button className="buttons" onClick={restartGame}>
+          Play Again
+        </button>
       </div>
     </div>
   );

@@ -4,7 +4,6 @@
   max-width: 1500px;
   margin: 0 auto;
   width: 1000px;
-  text-align: center;
   min-height: 100vh;
 }
 
@@ -20,7 +19,7 @@
 }
 @media (max-width: 700px) {
   #root {
-    width: 90vw;
+    width: 100vw;
   }
   .card {
     font-size: 0.9em;
@@ -50,13 +49,17 @@ body {
 
 h1.title {
   font-size: var(--title-font-size);
+  text-align: center;
+  letter-spacing: 0.2rem;
   line-height: 1;
   font-family: 'pokemon';
+  color: var(--title-color);
+  user-select: none;
+  -webkit-text-stroke: 3px var(--poke-blue);
+  text-shadow: -3px 3px 1px var(--poke-navy);
   padding-top: 0;
   padding-bottom: 1rem;
   margin-top: 0;
-  color: var(--title-color);
-  user-select: none;
 }
 
 button {
@@ -76,7 +79,11 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  outline: 2px solid var(--poke-yellow);
+  outline: 2px solid white;
+}
+
+.buttons {
+  background: var(--poke-red);
 }
 
 .score-bar {
@@ -88,6 +95,9 @@ button:focus-visible {
   z-index: 997;
   top: 0;
   box-shadow: var(--score-shadow);
+  font-family: 'VT323';
+  font-size: 1.1em;
+  margin-top: 0;
 }
 
 .score-bar * {
