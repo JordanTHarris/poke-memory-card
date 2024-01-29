@@ -5,8 +5,8 @@ function GameStart({ startGame, numCards }) {
     <div className="overlay">
       <div className="game-start modal">
         <h4>Click on a unique card to earn points. Score {numCards} to win.</h4>
-        <button className="buttons" onClick={startGame}>
-          Begin
+        <button className="retro-btn" onClick={startGame}>
+          START
         </button>
       </div>
     </div>

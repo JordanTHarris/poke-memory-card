@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import './styles/retroButton.css';
 import { getRandomPokemonCollection } from './PokemonAPI';
 import shuffleCards from './utils/shuffleCards';
 import Card from './components/Card';
@@ -78,8 +79,8 @@ function App() {
       <div className="score-bar">
         <h2>HI-SCORE: {hiScore}</h2>
         <h2>SCORE: {score}</h2>
-        <button className="buttons" onClick={startGame}>
-          Restart
+        <button className="retro-btn reset" onClick={startGame}>
+          RESTART
         </button>
       </div>
       <div className="card-container">
