@@ -61,8 +61,9 @@ h1.title {
   -webkit-text-stroke: 3px var(--poke-blue);
   text-shadow: -3px 3px 1px var(--poke-navy);
   padding-top: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 0;
   margin-top: 0;
+  margin-bottom: 2.2rem;
   user-select: none;
 }
 
@@ -116,8 +117,8 @@ button:focus-visible {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   justify-items: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   user-select: none;
 }
 
@@ -130,7 +131,7 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
   padding-bottom: 2rem;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 .github-logo {
