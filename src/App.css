@@ -7,28 +7,32 @@
   min-height: 100vh;
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1024px) {
   #root {
-    width: 60vw;
+  }
+} */
+
+/* Tablet */
+@media (max-width: 768px) {
+  #root {
+    --title-font-size: 2.8em;
+    --card-width: 130px;
+    --card-image-width: 5rem;
+    --card-title-size: 1.1em;
+    --card-text-size: 0.8em;
+    --score-text-size: 1em;
   }
 }
-@media (max-width: 935px) {
+
+/* Phone */
+@media (max-width: 425px) {
   #root {
-    width: 80vw;
-  }
-}
-@media (max-width: 700px) {
-  #root {
-    width: 100vw;
-  }
-  .card {
-    font-size: 0.9em;
-  }
-  h2 {
-    font-size: 1.1em;
-  }
-  .card img {
-    width: 7rem;
+    --title-font-size: 2.5em;
+    --card-width: 120px;
+    --card-image-width: 4rem;
+    --card-title-size: 1em;
+    --card-text-size: 0.7em;
+    --score-text-size: 1em;
   }
 }
 
@@ -54,12 +58,12 @@ h1.title {
   line-height: 1;
   font-family: 'pokemon';
   color: var(--title-color);
-  user-select: none;
   -webkit-text-stroke: 3px var(--poke-blue);
   text-shadow: -3px 3px 1px var(--poke-navy);
   padding-top: 0;
   padding-bottom: 1rem;
   margin-top: 0;
+  user-select: none;
 }
 
 button {
@@ -96,8 +100,9 @@ button:focus-visible {
   top: 0;
   box-shadow: var(--score-shadow);
   font-family: 'VT323';
-  font-size: 1.1em;
+  font-size: var(--score-text-size);
   margin-top: 0;
+  user-select: none;
 }
 
 .score-bar * {
@@ -113,6 +118,7 @@ button:focus-visible {
   justify-items: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  user-select: none;
 }
 
 .footer {
