@@ -28,10 +28,10 @@ function ThemeButton() {
     <div className="theme-container">
       <DarkModeSwitch
         className="dark-switch"
-        checked={theme === 'dark'}
+        checked={theme === 'light'}
         onChange={toggleTheme}
-        moonColor="#ffcb05"
-        sunColor="#003a70"
+        sunColor="#ffcb05"
+        moonColor="#003a70"
       />
     </div>
   );
