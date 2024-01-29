@@ -7,7 +7,7 @@ import GameOver from './components/GameOver';
 import GameStart from './components/GameStart';
 import ThemeButton from './components/ThemeButton';
 
-const NUM_CARDS = 10;
+const NUM_CARDS = 12;
 const POKE_MIN_INDEX = 1;
 const POKE_MAX_INDEX = 151;
 const DELAY_MS = 600; // match flip animation in Card.css
